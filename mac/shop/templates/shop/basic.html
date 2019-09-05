@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>{% block title%} {% endblock %}</title>
+     <style>
+       {% block css %} {% endblock %}
+  </style>
+  </head>
+  <body>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a href="/shop"> <img alt="logo" src="https://www.logogenie.net/download/preview/medium/4335544.png" width="150" height="90" class="d-inline-flex align-text-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/shop/about">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/shop/tracker">Tracker</a>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="/shop/contact">Contact Us</a>
+      </li>
+
+
+    </ul>
+    <form method='get' action='/shop/search/' class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+      <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <button type="button" class="btn btn-secondary my-2 sm-4" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+
+      Cart(<span id=cart>0</span>)
+</button>
+  </div>
+</nav>
+  {% block body %} {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    {% block js %} {% endblock %}
+
+  <footer class="ct-footer">
+  <div class="container">
+    <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+      <div class="ct-footer-pre text-center-lg">
+        <div class="inner">
+          <span>Join MyShopZone to receive updates</span>
+        </div>
+        <div class="inner">
+          <div class="form-group">
+            <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="Enter your email address" type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit" class="btn btn-motive">Join</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <ul class="ct-footer-list text-center-sm">
+      <li>
+        <h2 class="ct-footer-list-header">Get to Know Us</h2>
+        <ul>
+          <li>
+            <a href="">About Us</a>
+          </li>
+          <li>
+            <a href="">Careers</a>
+          </li>
+          <li>
+            <a href="">Press Releases</a>
+          </li>
+          <li>
+            <a href="">Gift a smile</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="ct-footer-list-header">Connect with Us</h2>
+        <ul>
+          <li>
+            <a href="">Facebook</a>
+          </li>
+          <li>
+            <a href="">Twitter</a>
+          </li>
+          <li>
+            <a href="">Instagram</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="ct-footer-list-header">Make Money with Us</h2>
+        <ul>
+          <li>
+            <a href="">Sell with Us</a>
+          </li>
+          <li>
+            <a href="">Become an Affiliate</a>
+          </li>
+          <li>
+            <a href="">Fulfilment by My Shop Zone</a>
+          </li>
+          <li>
+            <a href="">Advertise Your Products</a>
+          </li>
+          <li>
+            <a href="">Advisors</a>
+          </li>
+          <li>
+            <a href="">My Shop Zone Pay on Merchants</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="ct-footer-list-header">Let Us Help You</h2>
+        <ul>
+          <li>
+            <a href="">Your Account</a>
+          </li>
+          <li>
+            <a href="">Returns Centre</a>
+          </li>
+          <li>
+            <a href="">100% Purchase Protection</a>
+          </li>
+          <li>
+            <a href="">App Download</a>
+          </li>
+          <li>
+            <a href="">Assistant Download</a>
+          </li>
+          <li>
+            <a href="">Help</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="ct-footer-meta text-center-sm">
+      <div class="row">
+        <div class="col-sm-6 col-md-2">
+          <img alt="logo" src="https://www.logogenie.net/download/preview/medium/4335544.png">
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <address>
+            <span>MyShopZone<br></span>123 Easy Street<br>India<br>
+            <span>Phone: <a href="tel:5555555555">+0112345678</a></span>
+          </address>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <a href="" target="_blank"><img alt="app store" src="https://www.solodev.com/assets/footer/appstore.png"></a>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <a href="" target="_blank"><img alt="google play store" src="https://www.solodev.com/assets/footer/androidstore.png"></a>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <ul class="ct-socials list-unstyled list-inline">
+            <li>
+              <a href="" target="_blank"><img alt="facebook" src="https://www.solodev.com/assets/footer/facebook-white.png"></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><img alt="twitter" src="https://www.solodev.com/assets/footer/twitter-white.png"></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><img alt="youtube" src="https://www.solodev.com/assets/footer/youtube-white.png"></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><img alt="instagram" src="https://www.solodev.com/assets/footer/instagram-white.png"></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><img alt="pinterest" src="https://www.solodev.com/assets/footer/pinterest-white.png"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ct-footer-post">
+    <div class="container">
+      <div class="inner-left">
+        <ul>
+          <li>
+            <a href="">FAQ</a>
+          </li>
+          <li>
+            <a href="">News</a>
+          </li>
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-right">
+          <p><a href="">Privacy Policy</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
+<style>
+  html,
+  body,
+  img,
+  figure {
+    max-width: 100%;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    color: #000;
+    -ms-overflow-style: scrollbar;
+    -webkit-font-smoothing: antialiased;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+  a {
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }
+  .ct-u-paddingTop10 {
+    padding-top: 10px !important;
+  }
+  .ct-footer {
+    background-color: #111;
+    padding-top: 70px;
+    margin-top: 20px;
+    position: relative;
+  }
+  .ct-footer-pre {
+    width: 100%;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #555;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .ct-footer-pre span {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ebebeb;
+    font-size: 30px;
+  }
+  .ct-footer-pre .form-group {
+    position: relative;
+    margin: 0;
+  }
+  .ct-footer-pre .form-group:before,
+  .ct-footer-pre .form-group:after {
+    content: '';
+    display: table;
+  }
+  .ct-footer-pre .form-group:after {
+    clear: both;
+  }
+  .ct-footer-pre .form-group input {
+    border: 1px solid #00bff3;
+    background-color: #333;
+    color: #fff;
+    height: 50px;
+    padding: 0 30px;
+    margin: 0 5px;
+    border-radius: 0 !important;
+  }
+  .ct-footer-pre .form-group button {
+    height: 50px;
+    position: relative;
+    width: 80px;
+    padding: 0
+  }
+  .ct-footer-list {
+    padding: 50px 0;
+    list-style: none;
+    padding-left: 0;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #555;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .ct-footer-list > li .ct-footer-list-header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #00bff3;
+    font-size: 30px;
+  }
+  .ct-footer-list > li ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .ct-footer-list > li ul li a {
+    color: #fff;
+  }
+  .ct-footer-list > li ul li a:hover,
+  .ct-footer-post a:hover {
+    text-decoration: underline;
+  }
+  .ct-footer-post {
+    background: #000;
+    padding: 30px 0;
+  }
+  .ct-footer-post .inner-left,
+  .ct-footer-post .inner-right {
+    padding: 20px 0;
+  }
+  .ct-footer-post ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 -80px;
+  }
+  .ct-footer-post ul li {
+    display: inline-block;
+    margin: 0 80px;
+  }
+  .ct-footer-post a {
+    color: #fff;
+  }
+  .ct-footer-post p {
+    color: #fff;
+  }
+  .ct-footer-meta {
+    padding-top: 30px;
+  }
+  .ct-footer-meta .ct-socials {
+    padding: 1px 0;
+  }
+  .ct-footer-meta .ct-socials li {
+    padding: 0 10px;
+  }
+  .ct-footer--with-button {
+    padding-top: 150px;
+  }
+  address {
+    color: #fff;
+    display: inline-block;
+  }
+  address span {
+    font-weight: 600;
+  }
+  address a {
+    color: #fff;
+  }
+  address a:hover {
+    text-decoration: underline;
+  }
+  .btn {
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    color: #111;
+    font-size: 26px;
+    padding: 12px 30px;
+  }
+  .btn.btn-motive {
+    background-color: #00bff3;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .btn.btn-motive:hover,
+  .btn.btn-motive:hover:active {
+    background-color: #00bff3;
+  }
+  .btn.btn-violet {
+    color: #fff;
+    background-color: #4f4f99;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .btn.btn-violet:hover {
+    background-color: #37376b;
+  }
+  .btn.btn-violet:hover:active {
+    background-color: #2f2f5b
+  }
+  .btn.btn-green {
+    color: #fff;
+    background-color: #43670f;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .btn.btn-green:hover {
+    background-color: #36520c;
+  }
+  .btn.btn-green:hover:active {
+    background-color: #314a0b;
+  }
+  .btn.btn-red {
+    color: #fff;
+    background-color: #da2229;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .btn.btn-red:hover {
+    background-color: #ae1b21;
+  }
+  .btn.btn-red:hover:active {
+    background-color: #9d181e
+  }
+  .btn.btn-white {
+    background-color: #fff;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  .btn.btn-white:hover {
+    background-color: #d9d9d9;
+  }
+  .btn.btn-white:hover:active {
+    background-color: #c9c9c9
+  }
+  .btn.btn-large {
+    padding: 20px 50px;
+    font-size: 30px;
+    white-space: normal;
+  }
+  .ct-mediaSection {
+    background-attachment: fixed;
+  }
+  .ct-section_header--type1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #000;
+    font-size: 115px;
+    text-transform: uppercase;
+  }
+  .ct-section_header--type2 small {
+    font-family: 'coquette', fantasy;
+    font-size: 58px;
+    line-height: .7;
+    display: block;
+    font-weight: 700;
+    position: relative;
+    left: -12px;
+  }
+  .ct-section_header--type2 span {
+    font-family: 'Bebas Neue';
+    font-size: 115px;
+    line-height: .8;
+  }
+  .ct-section_header--type2 img {
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 15px;
+    padding-right: 3px;
+  }
+  .ct-section_header--type3 {
+    text-align: center;
+  }
+  .ct-section_header--type3 small {
+    font-family: 'coquette', fantasy;
+    font-size: 50px;
+    padding: 15px 0;
+    font-weight: 700;
+    color: #fff;
+    background-image: url("/core/fileparse.php/16/urlt/../images/ribbon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block
+  }
+  .ct-section_header--type3 span {
+    font-family: 'Bebas Neue';
+    font-size: 150px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: .85
+  }
+  .ct-section_header--type4 {
+    text-align: center;
+  }
+  .ct-section_header--type4:before,
+  .ct-section_header--type4:after {
+    content: '';
+    display: table
+  }
+  .ct-section_header--type4:after {
+    clear: both
+  }
+  .ct-section_header--type4 small {
+    font-family: 'coquette', fantasy;
+    font-size: 50px;
+    color: inherit;
+    font-weight: 700;
+    display: block
+  }
+  .ct-section_header--type4 span {
+    font-family: 'nimbus-sans-condensed', sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    font-size: 150px;
+    text-transform: uppercase;
+    display: block;
+    line-height: .7
+  }
+  .ct-section_header + p {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    text-align: center;
+  }
+  .ct-section_header--type4 + p {
+    font-family: 'nimbus-sans-condensed', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* Media Queries */
+
+  @media (min-width:1200px) {
+    .ct-footer-pre {
+      display: table;
+    }
+    .ct-footer-pre > .inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .ct-footer-list > li {
+      width: 20%;
+      display: table-cell;
+      vertical-align: top;
+    }
+    .ct-footer-list > li:last-child {
+      width: 7%;
+    }
+  }
+
+  @media (max-width:1199px) {
+    .ct-footer-pre .form-group {
+        padding-top: 15px
+    }
+  }
+  @media (max-width: 1199px) {
+    .ct-footer-list > li {
+      display: inline-block;
+      float: left;
+    }
+  }
+  @media (min-width:992px) {
+    .ct-footer-post .inner-left {
+      float: left;
+    }
+    .ct-footer-post .inner-right {
+      float: right;
+    }
+  }
+  @media (max-width:991px) {
+    .ct-footer-post {
+      text-align: center;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .ct-footer-list > li {
+      width: 33.3333%;
+    }
+  }
+  @media (min-width:768px) {
+    .ct-footer-post p {
+      display: inline-block;
+    }
+    .ct-footer-post p + p {
+      padding-left: 50px;
+    }
+  }
+  @media (max-width:767px) {
+    address {
+      padding-top: 30px;
+    }
+  }
+  @media (min-width: 480px) and (max-width:767px) {
+    .ct-footer-list > li {
+      width: 50%;
+    }
+  }
+  @media (min-width:480px) {
+    .ct-footer-pre .form-group button {
+      top: -1px;
+    }
+    .ct-footer-pre .form-group input {
+      width: 331px;
+    }
+  }
+  @media (max-width:479px) {
+    .ct-footer-pre .form-group input {
+      float: left;
+      width: 70%;
+      margin: 0;
+    }
+    .ct-footer-pre .form-group button {
+      float: left;
+      width: 30%;
+    }
+    .ct-footer-list > li {
+      width: 100%;
+      text-align: center;
+    }
+    .ct-footer-list {
+      padding: 20px 0;
+    }
+    .btn.btn-large {
+      padding: 20px 10px;
+      line-height: .9;
+      font-size: 26px;
+      letter-spacing: -.2px;
+    }
+    .ct-section_header--type1 {
+      font-size: 60px;
+      line-height: .8;
+    }
+    .ct-section_header + p {
+      font-size: 22px;
+    }
+    .ct-section_header--type3 small {
+      font-size: 25px;
+    }
+    .ct-section_header--type4 small {
+        font-size: 40px;
+    }
+    .ct-section_header--type3 span {
+      font-size: 90px;
+    }
+    .ct-section_header--type4 span {
+        font-size: 80px;
+    }
+    .ct-section_header--type4 + p {
+      font-size: 28px;
+    }
+  }
+   </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
